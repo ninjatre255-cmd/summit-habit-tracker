@@ -21,11 +21,11 @@ export const HABITS: Habit[] = [
   { id: "knee_am",     label: "Knee Flossing AM",       category: "recovery",  icon: "🦵",  description: "Wall sits + flossing" },
   { id: "knee_pm",     label: "Knee Flossing PM",       category: "recovery",  icon: "🦵",  description: "Wall sits + flossing" },
   { id: "sleep",       label: "Sleep 8h",               category: "recovery",  icon: "😴",  description: "Prioritize sleep" },
-  { id: "walk",        label: "Walk at Office",          category: "movement",  icon: "🚶",  description: "Step away from the desk" },
+  { id: "walk",        label: "Walk in the Morning",     category: "movement",  icon: "🚶",  description: "Step away from the desk" },
   { id: "walk_clear",  label: "Walk to Clear Head",     category: "movement",  icon: "🧠",  description: "Intentional, not doom-scrolling" },
+  { id: "hike",        label: "Weekend Hike",           category: "movement",  icon: "🥾",  description: "At least 3k ft gain — get time on the trail!", maxPerWeek: 2 },
   { id: "macrofactor", label: "Log Macros (MacroFactor)",category: "nutrition", icon: "🍽️",  description: "Guesstimate is fine" },
   { id: "snacks",      label: "Healthy Snacks Only",    category: "nutrition", icon: "🥗",  description: "No junk at the office" },
-  { id: "hydration",   label: "Hydration",              category: "nutrition", icon: "💧",  description: "3L+ water" },
   { id: "reading",     label: "Read",                   category: "mental",    icon: "📖",  description: "A few pages minimum" },
   { id: "inner_voice", label: "Quiet the Inner Voice",  category: "mental",    icon: "🧘",  description: "Don't feed the doubt" },
 ];
