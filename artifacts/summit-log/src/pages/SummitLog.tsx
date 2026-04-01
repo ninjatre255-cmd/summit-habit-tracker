@@ -107,7 +107,7 @@ export function SummitLog() {
                 ? catHabits.map((hab) => {
                     const checked = isChecked(hab.id, activeDate);
                     const wc = weekCount(hab.id, weekDates, isChecked);
-                    const limited = !!(hab.maxPerWeek && wc >= hab.maxPerWeek && !checked);
+                    const limited = !!(hab.maxPerWeek && !hab.softLimit && wc >= hab.maxPerWeek && !checked);
                     return (
                       <HabitRow
                         key={hab.id}

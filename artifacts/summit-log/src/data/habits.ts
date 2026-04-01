@@ -5,6 +5,7 @@ export interface Habit {
   icon: string;
   description: string;
   maxPerWeek?: number;
+  softLimit?: boolean; // show tally but never gray out
 }
 
 export interface Category {
@@ -23,7 +24,7 @@ export const HABITS: Habit[] = [
   { id: "sleep",       label: "Sleep 8h",               category: "recovery",  icon: "😴",  description: "Prioritize sleep" },
   { id: "walk",        label: "Walk in the Morning",     category: "movement",  icon: "🚶",  description: "Step away from the desk" },
   { id: "walk_clear",  label: "Walk to Clear Head",     category: "movement",  icon: "🧠",  description: "Intentional, not doom-scrolling" },
-  { id: "hike",        label: "Weekend Hike",           category: "movement",  icon: "🥾",  description: "At least 3k ft gain — get time on the trail!", maxPerWeek: 2 },
+  { id: "hike",        label: "Weekend Hike",           category: "movement",  icon: "🥾",  description: "At least 3k ft gain — get time on the trail!", maxPerWeek: 1, softLimit: true },
   { id: "macrofactor", label: "Log Macros (MacroFactor)",category: "nutrition", icon: "🍽️",  description: "Guesstimate is fine" },
   { id: "snacks",      label: "Healthy Snacks Only",    category: "nutrition", icon: "🥗",  description: "No junk at the office" },
   { id: "reading",     label: "Read",                   category: "mental",    icon: "📖",  description: "A few pages minimum" },
