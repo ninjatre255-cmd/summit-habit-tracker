@@ -17,7 +17,7 @@ export interface Category {
 export const HABITS: Habit[] = [
   { id: "weigh",       label: "Weigh Myself",           category: "fitness",   icon: "⚖️",  description: "Morning, consistent conditions" },
   { id: "matterhorn",  label: "Matterhorn Training",    category: "fitness",   icon: "🏔️",  description: "Alpine cardio block", maxPerWeek: 2 },
-  { id: "strength",    label: "Strength Training",      category: "fitness",   icon: "🏋️",  description: "Posterior chain / single-leg" },
+  { id: "strength",    label: "Strength Training",      category: "fitness",   icon: "🏋️",  description: "Two upper body and two lower body sessions", maxPerWeek: 4 },
   { id: "knee_am",     label: "Knee Flossing AM",       category: "recovery",  icon: "🦵",  description: "Wall sits + flossing" },
   { id: "knee_pm",     label: "Knee Flossing PM",       category: "recovery",  icon: "🦵",  description: "Wall sits + flossing" },
   { id: "sleep",       label: "Sleep 8h",               category: "recovery",  icon: "😴",  description: "Prioritize sleep" },
