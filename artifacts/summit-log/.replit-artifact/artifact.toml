@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Summit Log"
+version = "1.0.0"
+id = "artifacts/summit-log"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25523
+
+[services.development]
+run = "pnpm --filter @workspace/summit-log run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/summit-log", "run", "build" ]
+publicDir = "artifacts/summit-log/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25523"
+BASE_PATH = "/"
