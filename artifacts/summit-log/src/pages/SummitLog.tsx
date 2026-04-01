@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HABITS, CATEGORIES } from "@/data/habits";
 import { useHabitLogs } from "@/hooks/useHabitLogs";
+import { useMigrateToYesterday } from "@/hooks/useMigrateToYesterday";
 import { today, getWeekDates, formatDateLabel } from "@/lib/dateUtils";
 import { dayScore, weekScore, weekCount, scoreColor } from "@/lib/scoring";
 import { WeekNav } from "@/components/WeekNav";
@@ -15,6 +16,7 @@ export function SummitLog() {
   const [weekOffset, setWeekOffset] = useState(0);
   const [activeDate, setActiveDate] = useState(today());
   const [view, setView] = useState<View>("day");
+  useMigrateToYesterday();
   const { isChecked, toggle } = useHabitLogs();
 
   const weekDates = getWeekDates(weekOffset);
