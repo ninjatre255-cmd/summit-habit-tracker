@@ -27,7 +27,7 @@ export const HABITS: Habit[] = [
   { id: "walk_clear",  label: "Walk to Clear Head",     category: "movement",  icon: "🧠",  description: "Intentional, not doom-scrolling" },
   { id: "macrofactor", label: "Log Macros (MacroFactor)",category: "nutrition", icon: "🍽️",  description: "Guesstimate is fine" },
   { id: "snacks",      label: "Healthy Snacks Only",    category: "nutrition", icon: "🥗",  description: "No junk at the office" },
-  { id: "reading",     label: "Read",                   category: "mental",    icon: "📖",  description: "A few pages minimum" },
+  { id: "reading",     label: "Read / Learn Something Productive (>30 min for myself)", category: "mental", icon: "📖", description: "A few pages minimum" },
   { id: "audible",     label: "Listen to Audible",      category: "mental",    icon: "🎧",  description: "Any time — commute, walk, wind down" },
   { id: "inner_voice", label: "Quiet the Inner Voice",  category: "mental",    icon: "🧘",  description: "Don't feed the doubt" },
 ];
