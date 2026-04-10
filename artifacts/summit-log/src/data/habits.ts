@@ -25,7 +25,7 @@ export const HABITS: Habit[] = [
   { id: "knee_am",     label: "Knee Flossing AM",       category: "recovery",  icon: "🦵",  description: "Wall sits + flossing" },
   { id: "knee_pm",     label: "Knee Flossing PM",       category: "recovery",  icon: "🦵",  description: "Wall sits + flossing" },
   { id: "sleep",       label: "Get to Bed at 8:30 (10 @ Latest on Weekends)", category: "recovery", icon: "😴", description: "Prioritize sleep" },
-  { id: "walk",        label: "10 Minutes in Morning or Night", category: "movement", icon: "🚶", description: "Intentional, not doom-scrolling" },
+  { id: "walk",        label: "10 Minutes in Morning or Night", category: "movement", icon: "🚶", description: "Make it easy & make it rewarding" },
   { id: "macrofactor", label: "Log Macros (MacroFactor)",category: "nutrition", icon: "🍽️",  description: "Guesstimate is fine" },
   { id: "snacks",      label: "Healthy Food Only",      category: "nutrition", icon: "🥗",  description: "No junk at the office" },
   { id: "reading",     label: "Read / Learn Something Productive (>30 min for myself)", category: "mental", icon: "📖", description: "A few pages minimum" },
