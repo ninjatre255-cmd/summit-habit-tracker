@@ -7,6 +7,7 @@ export interface Habit {
   maxPerWeek?: number;
   softLimit?: boolean; // show tally but never gray out
   weekdaysOnly?: boolean; // disabled on Sat & Sun
+  weekendOnly?: boolean; // disabled Mon–Fri
 }
 
 export interface Category {
@@ -20,17 +21,17 @@ export const HABITS: Habit[] = [
   { id: "weigh",       label: "Weigh Myself",           category: "fitness",   icon: "⚖️",  description: "Morning, consistent conditions" },
   { id: "matterhorn",  label: "Matterhorn Training",    category: "fitness",   icon: "🏔️",  description: "3 zone 2 sessions over 60 min (hiking, incline treadmill, stairs, rower)", maxPerWeek: 3 },
   { id: "strength",    label: "Strength Training",      category: "fitness",   icon: "🏋️",  description: "Two upper body and two lower body sessions", maxPerWeek: 4 },
-  { id: "hike",        label: "Weekend Hike",           category: "fitness",   icon: "🥾",  description: "At least 3k ft gain — get time on the trail!", maxPerWeek: 1, softLimit: true },
+  { id: "hike",        label: "Weekend Hike",           category: "fitness",   icon: "🥾",  description: "At least 3k ft gain — get time on the trail!", maxPerWeek: 1, softLimit: true, weekendOnly: true },
   { id: "knee_am",     label: "Knee Flossing AM",       category: "recovery",  icon: "🦵",  description: "Wall sits + flossing" },
   { id: "knee_pm",     label: "Knee Flossing PM",       category: "recovery",  icon: "🦵",  description: "Wall sits + flossing" },
-  { id: "sleep",       label: "Sleep 8h",               category: "recovery",  icon: "😴",  description: "Prioritize sleep" },
-  { id: "walk",        label: "Walk in the Morning",     category: "movement",  icon: "🚶",  description: "Step away from the desk" },
-  { id: "walk_clear",  label: "Walk to Clear Head",     category: "movement",  icon: "🧠",  description: "Intentional, not doom-scrolling" },
+  { id: "sleep",       label: "Get to Bed at 8:30 (10 @ Latest on Weekends)", category: "recovery", icon: "😴", description: "Prioritize sleep" },
+  { id: "walk",        label: "10 Minutes in Morning or Night", category: "movement", icon: "🚶", description: "Intentional, not doom-scrolling" },
   { id: "macrofactor", label: "Log Macros (MacroFactor)",category: "nutrition", icon: "🍽️",  description: "Guesstimate is fine" },
   { id: "snacks",      label: "Healthy Snacks Only",    category: "nutrition", icon: "🥗",  description: "No junk at the office", weekdaysOnly: true },
   { id: "reading",     label: "Read / Learn Something Productive (>30 min for myself)", category: "mental", icon: "📖", description: "A few pages minimum" },
   { id: "audible",     label: "Listen to Audible",      category: "mental",    icon: "🎧",  description: "Any time — commute, walk, wind down" },
-  { id: "inner_voice", label: "Quiet the Inner Voice",  category: "mental",    icon: "🧘",  description: "Don't feed the doubt" },
+  { id: "stranger",    label: "Approach & Talk to 1 Stranger", category: "mental", icon: "🤝", description: "Put yourself out there" },
+  { id: "inner_voice", label: "Told Myself \"Haha That Guy Is Acting Crazy Haha\"", category: "mental", icon: "🧘", description: "Don't feed the doubt" },
 ];
 
 export const CATEGORIES: Category[] = [

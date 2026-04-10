@@ -109,9 +109,11 @@ export function SummitLog() {
                 ? catHabits.map((hab) => {
                     const checked = isChecked(hab.id, activeDate);
                     const wc = weekCount(hab.id, weekDates, isChecked);
-                    const isWeekend = [0, 6].includes(new Date(activeDate + "T12:00:00").getDay());
+                    const dayOfWeek = new Date(activeDate + "T12:00:00").getDay();
+                    const isWeekend = [0, 6].includes(dayOfWeek);
                     const limited = !!(
                       (hab.weekdaysOnly && isWeekend) ||
+                      (hab.weekendOnly && !isWeekend) ||
                       (hab.maxPerWeek && !hab.softLimit && wc >= hab.maxPerWeek && !checked)
                     );
                     return (
