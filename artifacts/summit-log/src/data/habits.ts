@@ -30,7 +30,7 @@ export const HABITS: Habit[] = [
   { id: "snacks",      label: "Healthy Food Only",      category: "nutrition", icon: "🥗",  description: "No junk at the office" },
   { id: "reading",     label: "Read / Learn Something Productive (>30 min for myself)", category: "mental", icon: "📖", description: "A few pages minimum" },
   { id: "audible",     label: "Listen to Audible",      category: "mental",    icon: "🎧",  description: "Any time — commute, walk, wind down" },
-  { id: "stranger",    label: "Approach & Talk to 1 Stranger", category: "mental", icon: "🤝", description: "Put yourself out there" },
+  { id: "stranger",    label: "Kept Promises to Myself", category: "mental", icon: "🤝", description: "Did my commitments, full effort, regardless of outcome, to be the best version of myself" },
   { id: "inner_voice", label: "Told Myself \"Haha That Guy Is Acting Crazy Haha\"", category: "mental", icon: "🧘", description: "Don't feed the doubt" },
 ];
 
