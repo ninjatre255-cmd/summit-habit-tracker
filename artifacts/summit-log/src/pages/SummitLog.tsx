@@ -88,7 +88,7 @@ export function SummitLog() {
       />
 
       {/* Score bar */}
-      <ScoreBar label={scoreLabel} score={score} presence={view === "day" ? getRating(activeDate) : null} />
+      <ScoreBar label={scoreLabel} score={score} />
 
       {/* Presence rating — day view only */}
       {view === "day" && (
