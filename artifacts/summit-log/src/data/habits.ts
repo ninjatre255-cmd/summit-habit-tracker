@@ -32,7 +32,7 @@ export const HABITS: Habit[] = [
   { id: "audible",     label: "Listen to Audible",      category: "mental",    icon: "🎧",  description: "Any time — commute, walk, wind down" },
   { id: "vision_board", label: "Look at Vision Board >1x/day", category: "mental", icon: "🎯", description: "Spawn in the life you want: be, do, have" },
   { id: "stranger",    label: "Approach & Talk to 1 Stranger", category: "mental", icon: "🤝", description: "Put yourself out there" },
-  { id: "inner_voice", label: "Kept Promises to Myself", category: "mental", icon: "🧘", description: "Did my commitments, full effort, regardless of outcome, to be the best version of myself" },
+  { id: "inner_voice", label: "Did I Stay True to Myself", category: "mental", icon: "🧘", description: "Did my commitments, full effort, regardless of outcome, to be the best version of myself" },
 ];
 
 export const CATEGORIES: Category[] = [
