@@ -2,7 +2,6 @@ import { useState } from "react";
 import { HABITS, CATEGORIES } from "@/data/habits";
 import { useHabitLogs } from "@/hooks/useHabitLogs";
 import { useMigrateToYesterday } from "@/hooks/useMigrateToYesterday";
-import { usePresenceRating } from "@/hooks/usePresenceRating";
 import { today, getWeekDates, formatDateLabel } from "@/lib/dateUtils";
 import { dayScore, weekScore, weekCount, scoreColor } from "@/lib/scoring";
 import { WeekNav } from "@/components/WeekNav";
@@ -10,7 +9,6 @@ import { ScoreBar } from "@/components/ScoreBar";
 import { HabitRow } from "@/components/HabitRow";
 import { WeekHabitRow } from "@/components/WeekHabitRow";
 import { WeekBreakdown } from "@/components/WeekBreakdown";
-import { PresenceRating } from "@/components/PresenceRating";
 
 type View = "day" | "week";
 
@@ -20,7 +18,6 @@ export function SummitLog() {
   const [view, setView] = useState<View>("day");
   useMigrateToYesterday();
   const { isChecked, toggle } = useHabitLogs();
-  const { getRating, setRating } = usePresenceRating();
 
   const weekDates = getWeekDates(weekOffset);
   const todayStr = today();
@@ -89,15 +86,6 @@ export function SummitLog() {
 
       {/* Score bar */}
       <ScoreBar label={scoreLabel} score={score} />
-
-      {/* Presence rating — day view only */}
-      {view === "day" && (
-        <PresenceRating
-          date={activeDate}
-          rating={getRating(activeDate)}
-          onRate={(val) => setRating(activeDate, val)}
-        />
-      )}
 
       {/* Habits */}
       <div className="px-4 pt-3">
